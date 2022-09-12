@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+    <style>
+        body { font: 1.5em Arial; }
+        button { 
+            font: 1.5em Arial; 
+            padding: 30px; 
+            transition: 0.5s;
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+        }
+        button:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das mensagens</h1>
+    <button onclick="botao1()">Botão 1</button>
+    <button onclick="botao2()">Botão 2</button>
+    <button onclick="botao3()">Botão 3</button>
+
+    <script>
+        function botao1() {
+            window.alert('Você clicou no botão 1!');
+        }
+
+        function botao2() {
+            window.alert('Você clicou no botão 2!');
+        }
+
+        function botao3() {
+            window.alert('Você clicou no botão 3!');
+        }
+    </script>
+</body>
+</html>
