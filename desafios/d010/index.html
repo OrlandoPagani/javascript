@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolvendo Bháskara</title>
+    <style>
+        html { font-family: Arial, Helvetica, sans-serif; }
+        button { padding: 30px; font-size: 1em; }
+        strong.destaque { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bháskara</h1>
+    <button onclick="calcular()">calcular</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function calcular() {
+            let a = window.parseInt(prompt('Qual o valor de A'));
+            let b = window.parseInt(prompt('Qual o valor de B'));
+            let c = window.parseInt(prompt('Qual o valor de C'));            
+            let delta = b ** 2 - 4 * a * c;
+
+            let raizes = '';
+            if (delta == 0) {
+                raizes = 'Esta equação possui duas raízes reais iguais.';
+            } else if (delta > 0) {
+                raizes = 'Esta equação possui duas raízes reais diferentes.';
+            } else {
+                raizes = 'Esta equação não possui raízes reais.'
+            }
+
+            let res = window.document.getElementById('resultado');
+            res.innerHTML = `<h2>Resolvendo Bháskara</h2>
+            <p>A equação atual é <strong>${a}² + ${b} + ${c} = 0</strong></p>
+            <p>O cálculo realizado será <strong>Δ = ${b}² - 4 . ${a} . ${c}</strong></p>
+            <p>O valor calculado foi <strong class='destaque'>Δ = ${delta}</strong></p>
+            <p>${raizes}</p>`
+        }
+    </script>
+</body>
+</html>
