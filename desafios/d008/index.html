@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+        html { font-family: Arial, Helvetica, sans-serif; text-align: center; }
+        body { max-width: 800px; min-width: 450px; margin: auto; }
+        button { 
+            padding: 30px; 
+            margin: 20px;
+            font-size: 1em;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 1px solid black;
+            transition: 0.5s;
+            background-image: linear-gradient(to bottom, rgb(147, 255, 147), rgb(75, 255, 75));
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="desc(0.1)">Desconto de 10%</button>
+    <button onclick="desc(0.2)">Desconto de 20%</button>
+    <button onclick="desc(0.3)">Desconto de 30%</button>
+    <button onclick="desc(0.4)">Desconto de 40%</button>
+    <section id="resultado">
+        <p>Clique nos botões acima para iniciar.</p>
+    </section>
+
+    <script>
+        let produto = window.prompt('Qual é o produto que você está comprando?');
+        let preco = window.parseFloat(prompt(`Qual é o preço de ${produto}`));
+        function desc(valor) {
+            let desconto = preco * valor;
+            let novoPreco = preco - desconto;
+            let res = window.document.getElementById('resultado');
+            res.innerHTML = `<h2>Calculando desconto de ${valor*100}% para ${produto}</h2>
+            <p>O preço original era ${preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.</p>
+            <p>Você acaba de ganhar ${desconto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de desconto (-${valor*100}%).</p>
+            <p>No fim, você vai pagar ${novoPreco.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})} no produto ${produto}.</p>`
+        }
+    </script>
+</body>
+</html>
