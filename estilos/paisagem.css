@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+main ul.exs {
+    transform: translateY(0px);
+    margin-bottom: 20px;
+}
