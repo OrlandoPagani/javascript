@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+html {
+    background-image: linear-gradient(to bottom, #F0E54D, #F2EC96);
+}
+
+main ul {
+    width: 250px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+main ul.exs {
+    transform: translateY(0px);
+    margin-bottom: 20px;
+}
