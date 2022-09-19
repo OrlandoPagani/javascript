@@ -1,5 +1,5 @@
 function iniciar() {
-    n = Math.floor(Math.random() * 100);
+    let n = Math.floor(Math.random() * 100);
     let res = document.querySelector('div#res');
     res.innerHTML += `<p>Acabei de pensar no número <mark>${n}</mark>!</p>`
 }
