@@ -24,6 +24,11 @@ div {
     padding: 10px;
 }
 
+input#botao {
+    padding: 20px;
+    font-weight: bold;
+}
+
 footer {
     color: white;
     text-align: center;
