@@ -1,5 +1,8 @@
 function iniciar() {
-    let res = document.querySelector('div#res');
+    let nasc = parseInt(prompt('Em que ano você nasceu?'))
     let data = new Date();
-    res.innerHTML = `<p>O que eu recebi do sistema foi <mark>${data}</mark></p>`
+    let ano = data.getFullYear();
+    let res = document.querySelector('div#res');
+    let idade = Number(ano) - Number(nasc);
+    res.innerHTML = `<p>Quem nasceu em ${nasc} vai completar <strong>${idade} anos</strong> em ${ano}.</p>`
 }
