@@ -15,7 +15,7 @@ function iniciar() {
                 res.innerHTML += `${c} = `
             }
         }
-        res.innerHTML += `<strong>${fat}</strong>`
+        res.innerHTML += `<strong>${fat.toLocaleString('pt-br')}</strong>`
     } else {
         alert('Por favor, utilize um número entre 1 e 21')
     }
