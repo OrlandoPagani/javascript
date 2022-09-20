@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estações no Brasil</title>
+    <title>Fatorial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Descubra a estação do ano</h1>
-    <input type="button" value="Informe o mês aqui" onclick="iniciar()">
-    <div id="res">Clique no botão acima para informar o mês.</div>
+    <h1>Cálculo de fatorial</h1>
+    <p>Escreva um número (entre 1 e 21) na caixa a seguir e te mostrarei o fatorial dele.</p>
+    <p>
+        <label for="txtn">Número</label>
+        <input type="number" name="num" id="txtn">
+        <input type="button" value="Fatorial" id="botao" onclick="iniciar()">
+    </p>
+    <div id="res">Preencha os dados acima e aperte o botão</div>
 
     <script src="script.js"></script>
 </body>
