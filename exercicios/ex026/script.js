@@ -1,18 +1,21 @@
-function iniciar() {
-    let mes = prompt('Digite o mês por extenso (ex: Setembro)').toLowerCase();
+function contar() {
+    let inicio = document.querySelector('input#txti');
+    let final = document.querySelector('input#txtf');
+    let i = Number(inicio.value);
+    let f = Number(final.value);
     let res = document.querySelector('div#res');
+    res.innerHTML += `<h2>Contando de ${i} até ${f}</h2>`;
 
-    res.innerHTML = `No mês de <mark>${mes}</mark>, estamos na estação `
-
-    if (mes == 'janeiro' || mes == 'fevereiro' || mes == 'março') {
-        res.innerHTML += `<strong><mark>VERÃO</mark></strong>`
-    } else if (mes == 'abril' || mes == 'maio' || mes == 'junho') {
-        res.innerHTML += `<strong><mark>OUTONO</mark></strong>`        
-    } else if (mes == 'julho' || mes == 'agosto' || mes == 'setembro') {
-        res.innerHTML += `<strong><mark>INVERNO</mark></strong>`
-    } else if (mes == 'outubro' || mes == 'novembro' || mes == 'dezembro') {
-        res.innerHTML += `<strong><mark>PRIMAVERA</mark></strong>`       
-    } else {
-        res.innerHTML = 'Desculpe. Opção inválida...'
+    if (i == f) {
+        res.innerHTML += 'Não é possível contar, pois os números são iguais'
+    } else if (i > f) {
+        for (let c = i; c >= f; c--) {
+            res.innerHTML += `${c} \u{1F449}`
+        }
+    } else if (i < f) {
+        for (let c = i; c <= f; c++) {
+            res.innerHTML += `${c} \u{1F449}`
+        }
     }
+    res.innerHTML += `\u{1F3C1}`
 }

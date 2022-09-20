@@ -11,6 +11,12 @@ h1, h2 {
 }
 
 input {
-    padding: 20px;
-    margin-bottom: 20px;
+    font-size: 1em
+}
+
+input#botao {
+    color: white;
+    background-color: darkgreen;
+    padding: 4px;
+    font-size: 1em;
 }

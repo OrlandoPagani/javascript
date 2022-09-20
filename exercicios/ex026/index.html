@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estações no Brasil</title>
+    <title>Contagem inteligente</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Descubra a estação do ano</h1>
-    <input type="button" value="Informe o mês aqui" onclick="iniciar()">
-    <div id="res">Clique no botão acima para informar o mês.</div>
+    <header>
+        <h1>Contagem "inteligente"</h1>
+    </header>
+    <section>
+        <div>
+            <p>Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos.</p>
+            <p>
+                <label for="txti">Valor inicial:</label>
+                <input type="number" name="inicio" id="txti" placeholder="Início da contagem">
+            </p>
+            <p>
+                <label for="txtf">Valor final:</label>
+                <input type="number" name="fim" id="txtf" placeholder="Fim da contagem">
+            </p>
+            <p>
+                <input type="button" value="Contar" id="botao" onclick="contar()">
+            </p>
+            <p>Preencha os dados acima e aperte o botão.</p>
+        </div>
+        <div id="res">
 
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
